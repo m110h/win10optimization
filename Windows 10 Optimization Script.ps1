@@ -83,7 +83,7 @@ $tweaks = @(
 	"DisableWAPPush",               # "EnableWAPPush",
 
 	### Service Tweaks ###
-	"SetUACLow",                    # "SetUACHigh",
+	# "SetUACLow",                    # "SetUACHigh",
 	# "EnableSharingMappedDrives",  # "DisableSharingMappedDrives",
 	"DisableAdminShares",           # "EnableAdminShares",
 	# "DisableSMB1",                # "EnableSMB1",
@@ -119,7 +119,7 @@ $tweaks = @(
 	"DisableStickyKeys",            # "EnableStickyKeys",
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
-	# "EnableFileDeleteConfirm",    # "DisableFileDeleteConfirm",
+	"EnableFileDeleteConfirm",    # "DisableFileDeleteConfirm",
 	"HideTaskbarSearchBox",         # "ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
 	"ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
@@ -131,7 +131,7 @@ $tweaks = @(
 	"HideSyncNotifications"         # "ShowSyncNotifications",
 	"HideRecentShortcuts",          # "ShowRecentShortcuts",
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
-	"ShowThisPCOnDesktop",          # "HideThisPCFromDesktop",
+	# "ShowThisPCOnDesktop",          # "HideThisPCFromDesktop",
 	# "ShowUserFolderOnDesktop",    # "HideUserFolderFromDesktop",
 	# "HideDesktopFromThisPC",      # "ShowDesktopInThisPC",
 	"HideDocumentsFromThisPC",      # "ShowDocumentsInThisPC",
@@ -143,8 +143,8 @@ $tweaks = @(
 	"SetVisualFXPerformance",       # "SetVisualFXAppearance",
 	# "DisableThumbnails",          # "EnableThumbnails",
 	"DisableThumbsDB",              # "EnableThumbsDB",
-	"AddENKeyboard",                # "RemoveENKeyboard",
-	"EnableNumlock",                # "DisableNumlock",
+	# "AddENKeyboard",                # "RemoveENKeyboard",
+	# "EnableNumlock",                # "DisableNumlock",
 
 	### Application Tweaks ###
 	"DisableOneDrive",              # "EnableOneDrive",
@@ -167,10 +167,9 @@ $tweaks = @(
     
     ### BlackDragonBE Tweaks ###
     "DisableExtraServices",
-    "DoNiniteInstall", # Note: check the list below and choose what you want installed
     "DeleteTempFiles",
     "CleanWinSXS", # Takes a whie but frees up a lot of space
-    "DownloadShutup10",
+    # "DownloadShutup10",
     "RemoveUnneededComponents",
     "DisableWindowsSearch",         # "EnableWindowsSearch",
     "DisableCompatibilityAppraiser",
@@ -193,95 +192,6 @@ $tweaks = @(
 	"WaitForKey",
 	"Restart"
 )
-
-# Ninite Apps
-# A # in front means it won't install
-$niniteapps = @(
-    ".net4.7",
-    "7zip",
-    # "adaware",
-    # "aimp",
-    # "air",
-    "audacity",
-    # "avast",
-    # "avg",
-    # "avira",
-    # "cccp",
-    # "cdburnerxp",
-    "chrome",
-    # "classicstart",
-    "cutepdf",
-    # "dropbox",
-    # "eclipse",
-    # "emule",
-    # "essentials",
-    "evernote",
-    "everything",
-    # "faststone",
-    # "filezilla",
-    # "firefox",
-    # "foobar",
-    "foxit",
-    # "gimp",
-    # "glary",
-    # "gom",
-    # "googledrive",
-    # "googleearth",
-    # "greenshot",
-    # "handbrake",
-    # "imgburn",
-    # "infrarecorder",
-    "inkscape",
-    # "irfanview",
-    # "itunes",
-    # "java8",
-    # "jdk8",
-    # "jdkx8",
-    # "keepass2",
-    "klitecodecs",
-    # "launchy",
-    # "libreoffice",
-    # "malwarebytes",
-    # "mediamonkey",
-    # "mozy",
-    # "musicbee",
-    "notepadplusplus",
-    # "nvda",
-    # "onedrive",
-    # "openoffice",
-    # "operaChromium",
-    # "paint.net",
-    # "pdfcreator",
-    # "peazip",
-    # "pidgin",
-    # "putty",
-    # "python",
-    "qbittorrent",
-    # "realvnc",
-    # "revo",
-    # "shockwave",
-    # "silverlight",
-    "skype",
-    # "spotify",
-    # "spybot2",
-    "steam",
-    # "sugarsync",
-    # "sumatrapdf",
-    # "super",
-    "teamviewer12",
-    # "teracopy",
-    # "thunderbird",
-    # "trillian",
-    # "vlc",
-    # "vscode",
-    # "winamp",
-    "windirstat",
-    # "winmerge",
-    # "winrar",
-    # "winscp",
-    "xnview"
-)
-
 
 
 ##########
@@ -2107,12 +2017,12 @@ Function CleanWinSXS {
 }
 
 # Download O&O Shutup10
-Function DownloadShutup10 {
-    Write-Host "Downloading Shutup10 & putting it on C drive..."
-    $url = "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe"
-    $output = "C:\Shutup10.exe"
-    Invoke-WebRequest $url -OutFile $output 
-}
+#Function DownloadShutup10 {
+#    Write-Host "Downloading Shutup10 & putting it on C drive..."
+#    $url = "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe"
+#    $output = "C:\Shutup10.exe"
+#    Invoke-WebRequest $url -OutFile $output 
+#}
 
 # Remove startup delay (use with SSD)
 Function DisableStartupDelay {
